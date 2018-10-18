@@ -142,6 +142,7 @@ hashtable_del(struct hashtable *ht, const char *key) {
             val = bkt->val;
             ht->slots[pos] = NULL;
             freefn(bkt);
+            ht->len--;
             break;
         }
         else {
